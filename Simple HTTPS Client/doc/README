@@ -1,0 +1,25 @@
+Michael Hypnarowski (mhypnaro@gmail.com)
+Date: March 2020
+
+Files:
+	- myweb.cpp: The source code for the client side of an HTTPS/HTTP client capable of performing GET or HEAD requests
+	- Compile by running "make" while in the "src" directory.
+		- Run as "./myweb (IP or host name) [-h]
+			- () indicate mandatory argument, [] indicate optional argument
+			- EX: ./myclient 11.11.11.11:443 -h
+			- EX2: ./myclient https://www.example.com
+		- Run from the "bin" directory.
+		- if -h is not specified, the response is generated in output.dat
+		- -h makes a head request, and displays the output in STDOUT
+			- no -h makes a GET request
+	- Makefile:
+		- "make": Compiles the the program, and then generates "myweb" in the "bin" directory
+		- "make clean": Remove the exceutable and an output.dat file (if one exists) in the "bin" directory
+	- README: This file.
+	- DESIGN.pdf: A brief explanation of the design of the program.
+
+Note:
+	- "ERROR"s are printed when something unusual happens, but they are NOT inidactors that the program has failed.
+	- "FATAL ERROR"s are printed when something critical goes wrong and the program can not recover.
+	- The program assumes HTTP is no https:// prefix is found
+	- The program assumes a default port of 80, unless https:// is found, in which case it assumes port 443

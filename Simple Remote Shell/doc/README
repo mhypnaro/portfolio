@@ -1,0 +1,34 @@
+Michael Hypnarowski (mhypnaro@gmail.com)
+Date: February 2020
+
+Files:
+	- myclient.cpp: The source code for the client
+		- Compile by running "make" while in the "src" directory.
+		- Can also compile by running "make client" while in the "src" directory.
+		- Run as "./myclient (ip) (port)"
+			- () indicate mandatory argument, [] indicate optional argument
+			- EX: ./myclient 11.11.11.11 8000
+			- EX2: ./myclient 11.11.11.22 9999
+		- Run from the "bin" directory.
+		- end the program with "exit".
+	- myserver.cpp The source code for the server
+		- Compile by running "make" while in the "src" directory.
+		- Can also be compiled by running "make server" while in the "src" directory.
+		- Run as "./myserver (port number)"
+			- () indicate mandatory argument, [] indicate optional argument
+			- EX: ./myserver 8000
+			- Specify an ephemeral port. You may not have permissions for a reserved port.
+	- Makefile:
+		- "make": Compiles the client and server, and then generates "myclient" and "myserver" in the "bin" directory.
+		- "make clean": Remove the executable files in the "bin" directory.
+		- "make client": Compiles the client and generates "myclient" in the "bin" directory.
+		- "make server": Compiles the server and generates "myserver" in the "bin" directory.
+	- README: This file.
+	- DESIGN.pdf: A brief explanation of the design of the program.
+
+Note:
+	- "ERROR"s are printed when something unusual happens, but they are NOT inidactors that the program has failed.
+	- "FATAL ERROR"s are printed when something critical goes wrong and the program can not recover.
+	- Wait for the "client $ " prompt before entering a new command.
+
+

@@ -1,0 +1,30 @@
+Michael Hypnarowski
+Date: January 2020
+
+
+Files:
+	- myclient.cpp: The source code for the client
+		- Compile by running "make" while in the "src" directory.
+		- Run as "./myclient server-info.txt (number of connections) (target file)"
+			- () indicate mandatory argument, [] indicate optional argument
+			- EX: ./myclient server-info.txt 4 one.txt
+			- EX2: ./myclient server-info.txt 1 sample.pdf
+		- Run from the "bin" directory.
+		- Generates the specified file in the directory where the program is run from
+	- myserver.cpp The source code for the server
+		- Compile by running "make" while in the "src" directory.
+		- Run as "./myserver (port number)"
+			- () indicate mandatory argument, [] indicate optional argument
+			- EX: ./myserver 8000
+			- Specify an ephemeral port. You may require permissions to use a well-known port.
+	- Makefile: Compiles the code and generates "myclient" and "myserver" in the "bin" directory
+		- Another option: "make clean" will remove the executable files in the "bin" directory.
+	- README: This file.
+	- DESIGN.pdf: A brief explanation of the design of the program and the CFD protocol.
+
+
+Notes:
+	- "ERROR"s are printed when something unusual happens, but they are NOT inidactors that the program has failed.
+	- "FATAL ERROR"s are printed when something critical goes wrong and the program can not recover.
+
+
